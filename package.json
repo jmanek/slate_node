@@ -1,0 +1,22 @@
+{
+  "name": "slate-node",
+  "version": "1.0.0",
+  "description": "Slate documentation generator ported to node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessemanek/slate.git"
+  },
+  "author": "Jesse Manek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessemanek/slate/issues"
+  },
+  "homepage": "https://github.com/jessemanek/slate#readme",
+  "dependencies": {
+    "marked": "^0.3.5"
+  }
+}
