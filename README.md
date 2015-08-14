@@ -19,3 +19,10 @@ The major difference is the use of [marked](https://github.com/chjj/marked) for 
 
 ### Todo/Bugs
 
+- Package it in a more modular way (Grunt?)
+- marked seems to be handling tables a bit differently, if there's too many em-dashes it's failing
+- highlight.js might have some differences in language detection than Rouge; at the very least 'shell' becomes 'bash'.  Ideally this repo should be compatible with any markdown made for Ruby Slate.
+- Cleanup how marked parses the top-level settings.  Right now they are manually being parsed.
+- Actually build the scss/js
+- Include the separate error markdown
+- Allow you to choose from highlight's different themes
