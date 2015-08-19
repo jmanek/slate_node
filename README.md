@@ -3,8 +3,6 @@
 A port of the documentation generator Slate to node.js.  
 [See it](http://jmanek.github.io/slate_node/) in action!
 
-I was looking to create API docs and Slate's UI was exactly what I wanted.  I came upon this *glaring* issue though.  I had to use Ruby!  Not that there's anything wrong with that!  But I want to be able to host it on our site, and use the same framework throughout to build everything -- I can't justify setting up Ruby to create one page.  
-
 The major difference is the use of [marked](https://github.com/chjj/marked) for parsing the .md, [highlight](https://highlightjs.org/) for syntax highlighting, and [Handlebars](http://handlebarsjs.com/) for templating.  
 
 
