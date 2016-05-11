@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jessemanek/slate#readme",
   "dependencies": {
-    "marked": "^0.3.5"
+    "marked": "^0.3.5",
+    "handlebars": "^3.0.3",
+    "highlight.js": "^8.7.0"
   }
 }
