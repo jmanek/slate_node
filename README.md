@@ -1,5 +1,7 @@
 [Slate](https://github.com/tripit/slate) with node.js
 ========
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 A port of the documentation generator Slate to node.js.  
 [See it](http://jmanek.github.io/slate_node/) in action!
 
