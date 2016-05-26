@@ -16,7 +16,7 @@
         $(function() {
           var langs = [];
           {{#each language_tabs}}
-            langs.push({{{str this}}});
+            langs.push({{{str this.name}}});
           {{/each}}          
           setupLanguages( langs );
         });
@@ -34,7 +34,7 @@
       <img src="images/logo.png" />
         <div class="lang-selector">
               {{#each language_tabs}}
-              <a href="#" data-language-name="{{this}}">{{this}}</a>
+              <a href="#" data-language-name="{{this.name}}">{{this.text}}</a>
               {{/each}}
         </div>
         <div class="search">
@@ -57,7 +57,7 @@
       <div class="dark-box">
           <div class="lang-selector">
               {{#each language_tabs}}
-              <a href="#" data-language-name="{{this}}">{{this}}</a>
+              <a href="#" data-language-name="{{this.name}}">{{this.text}}</a>
               {{/each}}
           </div>
       </div>
