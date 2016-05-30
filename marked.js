@@ -60,11 +60,17 @@ fs.readFile('./source/index.md', 'utf8', function (err, content) {
 
   for (var idx = 0; idx < tokens.length; idx++) {
     token = tokens[idx]
-    // console.log(token)
     if (token.type === 'list_item_start') {
       token = tokens[idx + 1].text
-      if (listName === 'language_tabs' && token === 'shell') {
-        token = 'bash'
+      if (listName === 'language_tabs' && token.indexOf('shell') > -1) {
+        token = token.replace('shell', 'bash')
+      }
+
+      if (listName === 'language_tabs') {
+        var lang = token
+        var langSplit = lang.split(':')
+        if (langSplit.length === 1) token = {name: langSplit[0], text: langSplit[0]}
+        if (langSplit.length === 2) token = {name: langSplit[0], text: langSplit[1]}
       }
       data[listName].push(token)
       idx += 2

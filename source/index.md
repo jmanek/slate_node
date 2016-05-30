@@ -2,9 +2,9 @@
 title: API Reference
 
 language_tabs:
-  - bash
-  - ruby
-  - python
+  - bash: cURL
+  - ruby: Ruby
+  - python: Python
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
