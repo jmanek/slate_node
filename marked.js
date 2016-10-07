@@ -31,6 +31,12 @@ marked.setOptions({
   }
 })
 
+// Create syntax-highlighting alias 'shell' for 'bash'
+var bash = highlight.getLanguage('bash')
+highlight.registerLanguage('shell', function (highlight) {
+  return bash
+})
+
 // Easier than changing Slate's js
 marked.defaults.langPrefix = 'highlight '
 
@@ -45,8 +51,6 @@ Handlebars.registerHelper('html', function (content) {
 fs.readFile('./source/index.md', 'utf8', function (err, content) {
   if (err) console.log(err)
 
-  // // marked doens't recognize "shell"?
-  content = content.replace(/``` shell/gm, '``` bash')
   content = content.split(/---/g)
 
   if (content.length === 1) {
@@ -62,9 +66,6 @@ fs.readFile('./source/index.md', 'utf8', function (err, content) {
     token = tokens[idx]
     if (token.type === 'list_item_start') {
       token = tokens[idx + 1].text
-      if (listName === 'language_tabs' && token.indexOf('shell') > -1) {
-        token = token.replace('shell', 'bash')
-      }
 
       if (listName === 'language_tabs') {
         var lang = token
