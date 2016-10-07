@@ -2,7 +2,7 @@
 title: API Reference
 
 language_tabs:
-  - bash: cURL
+  - shell: cURL
   - ruby: Ruby
   - python: Python
 
@@ -43,7 +43,7 @@ import kittn
 api = kittn.authorize('meowmeowmeow')
 ```
 
-```bash
+```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
@@ -79,7 +79,7 @@ api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
 ```
 
-```bash
+```shell
 curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
 ```
@@ -138,7 +138,7 @@ api = kittn.authorize('meowmeowmeow')
 api.kittens.get(2)
 ```
 
-```bash
+```shell
 curl "http://example.com/api/kittens/2"
   -H "Authorization: meowmeowmeow"
 ```
