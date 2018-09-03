@@ -25,3 +25,8 @@ The major difference is the use of [marked](https://github.com/chjj/marked) for 
 - Cleanup how marked parses the top-level settings.  Right now they are manually being parsed.
 - Actually build the scss/js
 - Allow you to choose from highlight's different themes
+
+### Alternatives
+A pure javascript alternative [node_clone](https://github.com/jmanek/slate_clone) with no build process
+
+
