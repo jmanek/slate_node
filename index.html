@@ -15,7 +15,7 @@
       <script>
         $(function() {
           var langs = [];
-            langs.push("bash");
+            langs.push("shell");
             langs.push("ruby");
             langs.push("python");
           setupLanguages( langs );
@@ -33,9 +33,9 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="bash">bash</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="shell"> cURL</a>
+              <a href="#" data-language-name="ruby"> Ruby</a>
+              <a href="#" data-language-name="python"> Python</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -67,7 +67,7 @@ api = <span class="hljs-constant">Kittn::APIClient</span>.authorize!(<span class
 
 api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
 </code></pre>
-<pre><code class="highlight bash"><span class="hljs-comment"># With shell, you can just pass the correct header with each request</span>
+<pre><code class="highlight shell"><span class="hljs-comment"># With shell, you can just pass the correct header with each request</span>
 curl <span class="hljs-string">"api_endpoint_here"</span>
   -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
 </code></pre>
@@ -93,7 +93,7 @@ api.kittens.get
 api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
 api.kittens.get()
 </code></pre>
-<pre><code class="highlight bash">curl <span class="hljs-string">"http://example.com/api/kittens"</span>
+<pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens"</span>
   -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
@@ -156,7 +156,7 @@ api.kittens.get(<span class="hljs-number">2</span>)
 api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
 api.kittens.get(<span class="hljs-number">2</span>)
 </code></pre>
-<pre><code class="highlight bash">curl <span class="hljs-string">"http://example.com/api/kittens/2"</span>
+<pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens/2"</span>
   -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
@@ -191,12 +191,70 @@ api.kittens.get(<span class="hljs-number">2</span>)
 </tbody>
 </table>
 
+<h1 id="errors">Errors</h1>
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request sucks</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarially offline for maintanance. Please try again later.</td>
+</tr>
+</tbody>
+</table>
         </div>
       <div class="dark-box">
           <div class="lang-selector">
-              <a href="#" data-language-name="bash">bash</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="shell"> cURL</a>
+              <a href="#" data-language-name="ruby"> Ruby</a>
+              <a href="#" data-language-name="python"> Python</a>
           </div>
       </div>
     </div>
