@@ -1,6 +1,5 @@
 [Slate](https://github.com/tripit/slate) with node.js
 ========
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 A port of the documentation generator Slate to node.js.  
 [See it](http://jmanek.github.io/slate_node/) in action!
@@ -9,13 +8,13 @@ The major difference is the use of [marked](https://github.com/chjj/marked) for 
 
 
 ### Running
-
-1. Clone the repo, install the npm modules.
-2. Run `node marked.js`
-3. This will build the page and save it to /source/index.html 
-4. You're done!  
-
-- Replace /source/index.md with your own markdown to use that instead
+```
+git clone https://github.com/jmanek/slate_node.git
+npm install
+# This outputs to the build directory
+# Replace /source/slate.md with your own markdown to use that instead
+npm run build
+```
 
 ### Todo/Bugs
 
