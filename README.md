@@ -15,6 +15,7 @@ This outputs to the `build` directory. Replace `source/slate.md` with your own m
 git clone https://github.com/jmanek/slate_node.git
 npm install 
 npm run build
+# Docs are now viewable at build/index.html
 ```
 
 ### Browser
