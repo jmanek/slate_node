@@ -84,7 +84,7 @@ if (isNode) {
   (async function() {
     await createDocs();
     $('#slatejs').remove();
-    await fse.copy('source', __dirname + '/../build');
+    await fse.copy(__dirname, __dirname + '/../build');
     fs.writeFileSync(__dirname + '/../build/index.html', $.html());
   })();
 } else {
