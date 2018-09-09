@@ -2,21 +2,20 @@
   "name": "slate-node",
   "version": "2.0.0",
   "description": "Slate documentation generator ported to node.js",
-  "main": "index.js",
   "scripts": {
     "build": "node source/slate.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessemanek/slate.git"
+    "url": "git+https://github.com/jmanek/slate_node.git"
   },
   "author": "Jesse Manek",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jessemanek/slate/issues"
+    "url": "https://github.com/jmanek/slate_node/issues"
   },
-  "homepage": "https://github.com/jessemanek/slate#readme",
+  "homepage": "https://github.com/jmanek/slate_node#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "handlebars": "^4.0.12",
