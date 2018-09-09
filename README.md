@@ -10,22 +10,22 @@ The major difference is the use of [marked](https://github.com/chjj/marked) for 
 ## Building 
 
 ### Node.js
+This outputs to the `build` directory. Replace `source/slate.md` with your own markdown to use that instead
 ```
 git clone https://github.com/jmanek/slate_node.git
-npm install
-# This outputs to the build directory
-# Replace source/slate.md with your own markdown to use that instead
+npm install 
 npm run build
 ```
 
 ### Browser
 Alternatively, you can directly serve the `source` directory from a webhost and the documentation will be built at runtime.  
 ```
+git clone https://github.com/jmanek/slate_node.git
 cd source
 python3 -m http.server
 # Docs are now viewable at http://0.0.0.0:8000/
 ```
-Any changes to `source/slate.md` will now be incorporated into index.html when it is reloaded. There is now no need to have node.js installed on the machine. This way you don't have to worry about incorpoting Slate into your current build process or creating an entirely new toolchain for it. It is a completely "static" version of Slate.  This is inherently slower than the node.js pre-built version, but it is completely independent of operating system or platform. You will not be able to view the documentation until deploying it to a server.
+Any changes to `source/slate.md` will be incorporated into `index.html` when it is reloaded. There is now no need to have node.js installed on the machine. This way you don't have to worry about incorpoting Slate into your current build process or creating an entirely new toolchain for it. It is a "static" version of Slate.  This is inherently slower than the node.js pre-built version, but it is completely independent of operating system or platform. You will not be able to view the documentation until deploying it to a server.
 
 ## Code Highlighting
 [Numerous themes](https://highlightjs.org/static/demo/) for highlight.js are available in `source/stylesheets/highlight`. You can switch between them by changing this line in `source/index.html`
