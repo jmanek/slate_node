@@ -55,14 +55,14 @@ const parserHeader = (markdown) => {
   return header;
 };
 
+// filePath is relative to this file
 const getFile = filePath => {
   if (isNode) return fs.readFileSync(__dirname + '/' + filePath, 'utf8');
   return $.get(filePath);
 };
 
-// Reads in slate.md located in the same or source directory.
-// Uses that to populate the <body> element of index.html
-// with generated documentation
+// Reads in source/slate.md and uses that to populate the 
+// <body> element of source/index.html with generated documentation
 const createDocs = async () => {
   let  markdown = (await getFile('slate.md')).split(/---/g);
   const data = {content: marked(markdown.slice(2).join('')), ...parserHeader(markdown)};
@@ -81,12 +81,10 @@ if (isNode) {
   var Handlebars = require('handlebars');
   var $ = require('cheerio').load(getFile('index.html'));
   configure();
-  (async function() {
-    await createDocs();
-    $('#slatejs').remove();
-    await fse.copy(__dirname, __dirname + '/../build');
-    fs.writeFileSync(__dirname + '/../build/index.html', $.html());
-  })();
+  createDocs();
+  $('#slatejs').remove();
+  fse.copy(__dirname, __dirname + '/../build')
+  .then(() => fs.writeFileSync(__dirname + '/../build/index.html', $.html()));
 } else {
   $(document).ready(() => {
     configure();
