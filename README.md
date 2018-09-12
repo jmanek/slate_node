@@ -22,9 +22,8 @@ npm run build
 Alternatively, you can directly serve the `source` directory from a webhost and the documentation will be built at runtime.  
 ```
 git clone https://github.com/jmanek/slate_node.git
-cd source
-python3 -m http.server
-# Docs are now viewable at http://0.0.0.0:8000/
+./node_modules/.bin/serve source
+# Docs are now viewable at localhost:5000
 ```
 Any changes to `source/slate.md` will be incorporated into `source/index.html` when it is reloaded. There is now no need to have node.js installed on the machine. This way you don't have to worry about incorpoting Slate into your current build process or creating an entirely new toolchain for it. It is a "static" version of Slate.  This is inherently slower than the node.js pre-built version, but it is completely independent of operating system or platform. You will not be able to view the documentation until deploying it to a server.
 
