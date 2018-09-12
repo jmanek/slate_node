@@ -22,6 +22,7 @@ npm run build
 Alternatively, you can directly serve the `source` directory from a webhost and the documentation will be built at runtime.  
 ```
 git clone https://github.com/jmanek/slate_node.git
+npm install serve # included in npm install
 ./node_modules/.bin/serve source
 # Docs are now viewable at localhost:5000
 ```
