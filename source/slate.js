@@ -35,9 +35,7 @@ const parserHeader = (markdown) => {
     if (token.type === 'list_item_start') {
       token = tokens[i + 1].text;
       if (listName === 'language_tabs') {
-        const langSplit = token.split(':');
-        if (langSplit.length === 1) token = {name: langSplit[0], text: langSplit[0]};
-        if (langSplit.length === 2) token = {name: langSplit[0], text: langSplit[1]};
+        token = {name: token.split(':')[0], text: token.split(':').pop()}
       }
       header[listName].push(token);
       i += 2;

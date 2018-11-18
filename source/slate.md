@@ -3,7 +3,7 @@ title: API Reference
 
 language_tabs:
   - shell: cURL
-  - ruby: Ruby
+  - Ruby
   - python: Python
   
 toc_footers:
